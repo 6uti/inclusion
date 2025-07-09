@@ -45,8 +45,13 @@ Puedes usar tanto una API REST como un formulario web.
 ```json
 {
   "testCases": [
-    { "x": 7, "y": 5, "n": 123 },
-    { "x": 5, "y": 0, "n": 4 }
+    { "x": 7, "y": 5, "n": 12345 },
+    { "x": 5, "y": 0, "n": 4 },
+    { "x": 10, "y": 5, "n": 15 },
+    { "x": 17, "y": 8, "n": 54321 },
+    { "x": 499999993, "y": 9, "n": 1000000000 },
+    { "x": 10, "y": 5, "n": 187 },
+    { "x": 2, "y": 0, "n": 999999999 }
   ]
 }
 ```
@@ -55,7 +60,15 @@ Puedes usar tanto una API REST como un formulario web.
 
 ```json
 {
-  "results": [119, 0]
+    "results": [
+        12339,
+        0,
+        15,
+        54306,
+        999999995,
+        185,
+        999999998
+    ]
 }
 ```
 
@@ -96,8 +109,8 @@ java -jar target/inclusion-0.0.1-SNAPSHOT.jar
 
 ### 🌍 Acceder a la app
 
-- Frontend: [http://localhost:8080/](http://localhost:8080/)
-- API REST: `POST http://localhost:8080/api/solve`
+- Frontend: [http://18.116.21.134:8080/](http://18.116.21.134:8080/)
+- API REST: `POST http://18.116.21.134:8080/api/solve`
 
 ---
 
