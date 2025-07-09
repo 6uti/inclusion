@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Resultados</title></head>
+<body>
+<h2>Resultados</h2>
+<ol>
+    <li th:each="res : ${results}" th:text="${res}">Resultado</li>
+</ol>
+<a href="/">Volver</a>
+</body>
+</html>

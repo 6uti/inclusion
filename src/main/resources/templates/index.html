@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Test Inclusion</title>
+</head>
+<body>
+<h1>Lista de Casos de Prueba</h1>
+<form th:action="@{/solve-form}" method="post" th:object="${request}">
+    <div th:each="testCase, iStat : *{testCases}">
+        <h3>Caso [[${iStat.index + 1}]]</h3>
+        <label>X: </label><input type="number" th:field="*{testCases[__${iStat.index}__].x}" required/><br/>
+        <label>Y: </label><input type="number" th:field="*{testCases[__${iStat.index}__].y}" required/><br/>
+        <label>N: </label><input type="number" th:field="*{testCases[__${iStat.index}__].n}" required/><br/>
+        <hr/>
+    </div>
+    <button type="submit">Calcular</button>
+</form>
+</body>
+</html>
